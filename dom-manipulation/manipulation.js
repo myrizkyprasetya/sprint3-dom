@@ -16,18 +16,21 @@ const mentor = document.querySelector('#b p');
 mentor.setAttribute('href', 'http://facebook.com');
 
 //element.classList --> memanipulasi kelas
-
 //classList.add() --> menambah kelas baru
-jojo.classList.add('jojo');
+// jojo.classList.add('jojo');
 
 //classList.remove() --> menghilangkan kelas yang ada
-jojo.classList.remove('jojo');
+// jojo.classList.remove('jojo');
 
 //classList.toggle() --> jika elemen kelas tidak ada, method ini akan menambahkan. jika elemen sudah punya, maka akan menghilangkan kelas tertentu.
-// jojo.classList.toggle('jojo');
+jojo.classList.toggle('jojo');
+
 //classList.contains() --> mengetahui kelas tertentu.
 // const cek = jojo.classList.contains('abcddd');
+
 //classList.replace() --> mengganti kelas yang lama ke kelas yang baru.
+jojo.classList.replace('jojo', 'yippii');
+
 
 // Node Manipulation
 //document.createElement()
