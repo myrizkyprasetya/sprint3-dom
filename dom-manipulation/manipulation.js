@@ -32,10 +32,56 @@ jojo.classList.toggle('jojo');
 jojo.classList.replace('jojo', 'yippii');
 
 
+
 // Node Manipulation
 //document.createElement()
 //document.createTextNode()
-//node.appendChild()
+//node.appendChild() --> disimpan diakhir parent
 //node.insertBefore()
 //parentNode.removeChild()
 //parentNode.replaceChild()
+
+//untuk menambahkan paragraph baru dengan membuat elemen dulu
+const pBaru = document.createElement('p');
+//membuat tulisan
+const tulisan = document.createTextNode('ini paragraf baru');
+//simpan tulisan ke paragraph
+//node.appendChild()
+pBaru.appendChild(tulisan);
+//cara menampilkan ke document adalah dengan menambahkan pBaru ke sectionA
+const sectionA = document.getElementById('a');
+sectionA.appendChild(pBaru);
+
+
+
+//Contoh untuk menambahkan list baru ditengah-tengah
+const listBaru = document.createElement('li');
+const isiList = document.createTextNode('Yasifa');
+
+listBaru.appendChild(isiList);
+
+const tempatList = document.querySelector('#b ul');
+
+const listAlif = tempatList.querySelector('li:nth-child(2)');
+
+tempatList.insertBefore(listBaru, listAlif);
+
+//menghapus element
+//define dulu elementnya
+const hapusElement = document.getElementsByTagName('a')[0];
+//perintah menghapus element
+sectionA.removeChild(hapusElement);
+
+
+//cara mereplace element
+//buat element baru berupa h2
+const h2 = document.createElement('h2');
+//buat node text ke h2
+const tulisanH2 = document.createTextNode('Para Mentor');
+//gabungkan node text ke h2
+h2.appendChild(tulisanH2);
+//element yg akan kita replace di define dulu
+const sectionB = document.getElementById('b');
+const p4 = sectionB.querySelector('p');
+//perintah replace element
+sectionB.replaceChild(h2, p4);
